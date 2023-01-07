@@ -1,0 +1,24 @@
+<form action="/action_page.php">
+  <label for="fname">Input:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+</form>
+<input type="button" class='btnclass' value="Convert">
+    <p class='showtime'></p>
+
+    <script>
+        let btn = document.querySelector('.btnclass');
+        let time = document.querySelector('.showtime');
+
+        btn.onclick = function () {
+			let str = document.getElementById('fname').value;
+			let output = "";
+			for(let i = 0; i < str.length; i++)
+			{
+				if(str != '\n' && str != '')
+				{
+					output += str[i];
+				}
+			}
+            time.innerHTML = output;
+        };
+    </script>
